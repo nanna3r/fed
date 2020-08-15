@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="w3-row w3-animate-left" *ngIf="type == 'list'">
+        <div class="w3-col s12 m6 l4 item" (click)="change('view', restaurant)" *ngFor="let restaurant of restaurants" [ngStyle]="{'background-image': 'url(' + restaurant.backgroundImageURL + ')'}">
+            <span class="filled"></span>
+            <span class="name">{{restaurant.name}}</span>
+            <span class="category">{{restaurant.category}}</span>
+        </div>
+    </div>
+    <div class="w3-row w3-animate-right" *ngIf="type == 'view'">
+        <div class="w3-col s12 item">
+            <div id="map"></div>
+        </div>
+        <div class="w3-col s12 name-details">
+            <span class="name">{{data.name}}</span>
+            <span class="category">{{data.category}}</span>
+        </div>
+        <div class="w3-col s12 address-details">
+            <span class="address">{{data.location.formattedAddress.toString()}}</span>
+        </div>
+        <div class="w3-col s12 phone-details" *ngIf="data.contact">
+            <span class="address">{{data.contact.formattedPhone}}</span>
+        </div>
+        <div class="w3-col s12 twitter-details" *ngIf="data.contact">
+            <span class="address">{{data.contact.twitter}}</span>
+        </div>
+    </div>
+</div>

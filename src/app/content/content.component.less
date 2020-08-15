@@ -1,0 +1,72 @@
+.content{
+    >div{
+        >.item{
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            >span {
+                color: #FFFFFF;
+                padding-left: 12px;
+                &.filled{
+                    flex: 1;
+                }
+                &.name {
+                    font-size: 16px; 
+                    font-weight: bold;
+                    font-family: "Avenir Next Demi Bold";
+                }
+                &.category{
+                    font-size: 12px; 
+                    margin-top: -3px;
+                }
+            }
+            >#map{
+                height: 100%;
+            }
+        }
+        >.name-details{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            height: 60px;
+            background-color: #34B379;
+            color: #FFFFFF;
+            >span {
+                color: #FFFFFF;
+                padding-left: 12px;
+                &.name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: "Avenir Next Demi Bold";
+                }
+                &.category{
+                    font-size: 12px; 
+                    margin-top: -3px;
+
+                }
+            }
+        }
+        >.address-details{
+            margin-top: 16px;
+            font-size: 16px;
+            padding-left: 12px;
+            color: #2A2A2A;
+        }
+        >.phone-details{
+            margin-top: 26px;
+            margin-bottom: 26px;
+            font-size: 16px;
+            padding-left: 12px;
+            color: #2A2A2A;
+        }
+        >.twitter-details{
+            font-size: 16px;
+            padding-left: 12px;
+            color: #2A2A2A;
+        }
+    }
+}
